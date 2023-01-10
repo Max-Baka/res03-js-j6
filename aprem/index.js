@@ -15,13 +15,17 @@ function exercice4()
 
 function exercice3()
 {
-
+let  canvasDom  =  document.querySelector('#ex3');
+let  ctx  =  canvasDom.getContext('2d');
+ctx.font = 'bold 68px Montserrat';
+ctx.fillStyle ='#000000';
+ctx.fillText('Geometry.io', 50, 200);
 }
 
 function exercice2()
 {
 let circle = {
-    color: "red",
+    color: "blue",
     radius:100,         // L'objet du DOM Canvas
     x:220,
     y:140,
@@ -43,10 +47,10 @@ ctx.beginPath();    // on trace un arc fermé (un cercle)
 ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);     // ctx.arc(x, y, rayon, angleDépart, angleFin) attention angle en radians
 
 
-/*ctx.fill(); // on dessine sur le canvas en remplissant le tracé */
+ctx.fill(); // on dessine sur le canvas en remplissant le tracé
 
 
-ctx.stroke();   // On aurait pu dessiner sur le Canvas seulement le contour ! 
+/*// ctx.stroke();   // On aurait pu dessiner sur le Canvas seulement le contour ! */
 }
 
 function exercice1()
